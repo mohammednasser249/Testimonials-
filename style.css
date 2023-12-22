@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --white:#fff;
+    --bgc : #ECF2F7;
+    --black:#000;
+}
+
+
+html{
+    font-size: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--bgc);
+}
+
+
+.testimonials{
+
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 300px 300px 300px 300px;
+    justify-content: center;
+    align-content: center;
+    grid-gap:10px;
+    grid-template-areas: "t1 t1 t2 t3"
+                         " t4 t5 t5 t3 ";         ;
+
+}
+
+.title{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 5rem;
+}
+
+.test1{
+
+    background-color: #733FC7;
+    grid-area: t1;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color:var(--white)
+}
+
+.test2{
+
+    background: #49556C;
+    grid-area: t2;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color:var(--white)
+
+}
+
+.test3{
+
+    background: #FEFEFE;
+    grid-area: t3;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color:var(--black)
+
+}
+.test4{
+
+    background: #FEFEFE;
+    grid-area: t4;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color:var(--black)
+
+
+}
+
+.test5{
+
+    background: #181F2C;
+    grid-area: t5;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    color:var(--white)
+
+}
+
+
+.image img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    
+}
+
+.image{
+   display: flex;
+   align-items: center;
+   margin:1.2rem 0 ;
+}
+
+.image span{
+    margin: 0 1rem;
+}
+
+.test-content{
+    margin-top: 1.2rem;
+    font-size: 2rem;
+}
+
+.test-title{
+    font-size: 2rem;
+}
+
+.name{
+    font-size: 2rem;
+    font-weight: 700;
+}
