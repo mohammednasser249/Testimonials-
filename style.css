@@ -27,20 +27,19 @@ body{
 .testimonials{
 
     display: grid;
-    height: 100vh;
-    grid-template-rows: 300px 300px;
-    grid-template-columns: 300px 300px 300px 300px;
-    justify-content: center;
-    align-content: center;
+    width: 90%;
+    margin: auto;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap:10px;
     grid-template-areas: "t1 t1 t2 t3"
-                         " t4 t5 t5 t3 ";         ;
-
+                         " t4 t5 t5 t3 ";        
+    margin-top: 1.5rem;
 }
 
 .title{
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 3rem;
     font-size: 5rem;
 }
 
@@ -50,7 +49,8 @@ body{
     grid-area: t1;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    color:var(--white)
+    color:var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .test2{
@@ -59,7 +59,10 @@ body{
     grid-area: t2;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    color:var(--white)
+    color:var(--white);
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 
 }
 
@@ -69,7 +72,9 @@ body{
     grid-area: t3;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    color:var(--black)
+    color:var(--black);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 
 }
 .test4{
@@ -78,7 +83,9 @@ body{
     grid-area: t4;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    color:var(--black)
+    color:var(--black);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 
 
 }
@@ -89,7 +96,9 @@ body{
     grid-area: t5;
     border-radius: 5px;
     padding: 1rem 1.5rem;
-    color:var(--white)
+    color:var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 
 }
 
@@ -99,7 +108,9 @@ body{
     width: 50px;
     border-radius: 50%;
     
+
 }
+
 
 .image{
    display: flex;
@@ -119,8 +130,53 @@ body{
 .test-title{
     font-size: 2rem;
 }
+.test-content::after{
+  content: " \" ";
+}
+.test-content::before{
+    content: " \" ";
+  }
 
 .name{
     font-size: 2rem;
     font-weight: 700;
+}
+
+
+@media (max-width:991px) {
+    .testimonials{
+
+     
+        grid-template-rows: 1fr 1fr 1fr  ;
+        grid-template-columns: 1fr 1fr 1fr ;
+        justify-content: center;
+        align-content: center;
+        grid-gap:10px;
+        grid-template-areas: "t1 t1 t2 "
+                             " t4 t5 t5  "
+                              "t3 t3 t3 ";        
+        margin-top: 1.5rem;
+    }
+    
+    
+}
+
+@media (max-width:768px) {
+    .testimonials{
+
+      
+        grid-template-rows: repeat(5,auto);
+        grid-template-columns: 1fr ;
+        justify-content: center;
+        align-content: center;
+        grid-gap:10px;
+        grid-template-areas: "t1 t1 t1 "
+                             " t2 t2 t2 "
+                              "t3 t3 t3 "
+                               "t4 t4 t4"
+                               "t5 t5 t5";        
+        margin-top: 1.5rem;
+    }
+    
+    
 }
